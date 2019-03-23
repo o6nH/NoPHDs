@@ -403,7 +403,7 @@ let eduVids = [];
 let entVids = [];
 
 let operator = ["+", "-", "*",];
-let n1 = document.getElementById("n1");
+let equation = document.getElementById("equation");
 let formAnswer = document.getElementById("formAnswer");
 let num1 = Math.floor(Math.random() * 10);
 let num2 = Math.floor(Math.random() * 10);
@@ -412,7 +412,7 @@ let opPicked = operator[randOp];
 
 function changeEquation() {
 
-    n1.innerHTML = `${num1} ${opPicked} ${num2}`;
+    equation.innerHTML = `${num1} ${opPicked} ${num2}`;
 }
 
 
@@ -421,23 +421,27 @@ let isCorrect;
 function checkAnswer() {
     let x = formAnswer.value;
     if (opPicked === '+' && num1 + num2 == x) {
-        alert('You got it correct!');
+        alert(`Good Job! \n ${equation.value} = ${x} \n is correct!`);
         isCorrect = true;
     }
     else if (opPicked === '-' && num1 - num2 == x) {
-        alert('You got it correct!');
+        alert(`Good Job! \n ${equation.value} = ${x} \n is correct!`);
         isCorrect = true;
     }
     else if (opPicked === '*' && num1 * num2 == x) {
-        alert('You got it correct!');
+        alert(`Good Job! \n ${equation.value} = ${x} \n is correct!`);
         isCorrect = true;
     }
     else {
         alert('Sorry, that answer is incorrect. Please try again');
         isCorrect = false;
     }
-    const videoContainer = document.getElementById('video-container');
-    videoContainer.innerHTML = `<iframe
+    if (isCorrect) {
+
+
+        const videoContainer = document.getElementById('video-container');
+
+        videoContainer.innerHTML = `<iframe
     width="560"
     height="315"
     src="https://www.youtube.com/embed/${eduVids.pop()}"
@@ -445,7 +449,8 @@ function checkAnswer() {
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen
   ></iframe>`
-}
+    }
+};
 
 
 
