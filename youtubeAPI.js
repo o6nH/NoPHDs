@@ -394,41 +394,6 @@
 //   ]
 // }
 
-let num1 = Math.floor(Math.random() * 10);
-let num2 = Math.floor(Math.random() * 10);
-let operator = ["+", "-", "*",];
-let randOp = Math.floor(Math.random() * 3);
-let opPicked = operator[randOp];
-let n1 = document.getElementById("n1");
-let formAnswer = document.getElementById("formAnswer");
-
-function changeOp () {
-    n1.innerHTML = `${num1} ${opPicked} ${num2}`;
-}
-
-changeOp ();
-formButton.addEventListener('click', answer);
-
-
-function answer () {
-    let x = formAnswer.value;
-    if (opPicked === '+' && num1 + num2 == x) {
-        alert ('You got it correct!');
-    }
-    else if (opPicked === '-' && num1 - num2 == x) {
-        alert ('You got it correct!');
-    }
-    else if (opPicked === '*' && num1 * num2 == x) {
-        alert ('You got it correct!');
-    }
-    else if (opPicked === '/' && num1 / num2 == x) {
-        alert ('You got it correct!');
-    }
-    else {
-        alert ('Sorry, try again');
-    }
-}
-
 
 // Using Fecth
 const entertainURL = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&playlistId=PL0FeOu0VtegcbplQ3bZ2SgjKVwsb-GxpJ&key=AIzaSyBWl800UrBjg3uVTtb9qPHTVuJywVDeaj0'
@@ -436,6 +401,54 @@ const eduURL = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet
 
 let eduVids = [];
 let entVids = [];
+
+let operator = ["+", "-", "*",];
+let n1 = document.getElementById("n1");
+let formAnswer = document.getElementById("formAnswer");
+let num1 = Math.floor(Math.random() * 10);
+let num2 = Math.floor(Math.random() * 10);
+let randOp = Math.floor(Math.random() * 3);
+let opPicked = operator[randOp];
+
+function changeEquation() {
+
+    n1.innerHTML = `${num1} ${opPicked} ${num2}`;
+}
+
+
+let isCorrect;
+
+function checkAnswer() {
+    let x = formAnswer.value;
+    if (opPicked === '+' && num1 + num2 == x) {
+        alert('You got it correct!');
+        isCorrect = true;
+    }
+    else if (opPicked === '-' && num1 - num2 == x) {
+        alert('You got it correct!');
+        isCorrect = true;
+    }
+    else if (opPicked === '*' && num1 * num2 == x) {
+        alert('You got it correct!');
+        isCorrect = true;
+    }
+    else {
+        alert('Sorry, that answer is incorrect. Please try again');
+        isCorrect = false;
+    }
+    const videoContainer = document.getElementById('video-container');
+    videoContainer.innerHTML = `<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/${eduVids.pop()}"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>`
+}
+
+
+
 
 fetch(entertainURL, { method: "GET" })
     .then(res => res.json())
@@ -460,14 +473,7 @@ fetch(eduURL, { method: "GET" })
         console.log(eduVids);
     })
 
+changeEquation();
+formButton.addEventListener('click', checkAnswer);
 
-    <iframe
-         width="560"
-         height="315"
-         src="https://www.youtube.com/embed/${///video.id.videoId}"
-         frameborder="0"
-         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-         allowfullscreen
-       ></iframe>
-       
-//   .catch(error => console.error('Error:', error));
+
