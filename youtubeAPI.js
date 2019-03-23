@@ -395,31 +395,32 @@
 // }
 
 // Using Fecth
-const entertainURL = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&playlistId=PL0FeOu0VtegcevmxMM6hnmmlTFycHZ3Zb&key=AIzaSyBWl800UrBjg3uVTtb9qPHTVuJywVDeaj0'
+const entertainURL = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&playlistId=PL0FeOu0VtegcbplQ3bZ2SgjKVwsb-GxpJ&key=AIzaSyBWl800UrBjg3uVTtb9qPHTVuJywVDeaj0'
 const eduURL = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&playlistId=PL0FeOu0VtegcevmxMM6hnmmlTFycHZ3Zb&key=AIzaSyBWl800UrBjg3uVTtb9qPHTVuJywVDeaj0'
 
 let eduVids = [];
 let entVids = [];
 
 fetch(entertainURL, { method: "GET" })
-  .then(res => res.json())
-  .then(response => {
-    console.log(response.items)
-    for (let snip of response.items){
-      entVids.push(snip.resourceId.videoId);
-    }
-    //console.log('Success:', JSON.stringify(response));
-  })
-  .catch(error => console.error('Error:', error));
+    .then(res => res.json())
+    .then(response => {
+        // console.log(response.items)//.snippet)
+        for (let snip of response.items) {
+            // console.log(snip.snippet.resourceId.videoId);
+            entVids.push(snip.snippet.resourceId.videoId);
+        }
+        console.log(entVids);
+    })
+//   .catch(error => console.error('Error:', error));
 
 fetch(eduURL, { method: "GET" })
-  .then(res => res.json())
-  .then(response => {
-    for (let snip of response.items){
-      eduVids.push(snip.resourceId.videoId);
-    }
-    //console.log('Success:', JSON.stringify(response));
-  })
-  .catch(error => console.error('Error:', error));
-
-console.log("eduVids:",eduVids);
+    .then(res => res.json())
+    .then(response => {
+        // console.log(response.items)//.snippet)
+        for (let snip of response.items) {
+            // console.log(snip.snippet.resourceId.videoId);
+            eduVids.push(snip.snippet.resourceId.videoId);
+        }
+        console.log(eduVids);
+    })
+//   .catch(error => console.error('Error:', error));
