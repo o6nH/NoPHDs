@@ -404,6 +404,7 @@ let entVids = [];
 fetch(entertainURL, { method: "GET" })
   .then(res => res.json())
   .then(response => {
+    console.log(response.items)
     for (let snip of response.items){
       entVids.push(snip.resourceId.videoId);
     }
