@@ -13,7 +13,7 @@ body {
     border-color: #12BCCB;
     background-image: url("sunshine.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 
 html {
