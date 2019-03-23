@@ -5,87 +5,98 @@
     border: 5px solid #FF7503;
     height: 80%;
     background-color: #3AAFEC;
-}
-
-body {
+ }
+ 
+ body {
     background: #128CCB;
     background-image: url("sunshine.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-html {
+ }
+ 
+ html {
     height: 100%;
     font-family: "Margarine",sans-serif;
-}
-
-h1 {
+ }
+ 
+ h1 {
     text-align: center;
     color: #ADEB00;
-}
-
-h2 {
+ }
+ 
+ h2 {
    color: #FFE000;
    text-align: center;
    font-family: "Margarine",sans-serif;
-}
-
-.form {
+ }
+ 
+ .form {
     color: #3AAFEC;
-}
-
-.question {
+ }
+ 
+ .question {
     color: black;
     font-style: bold;
     text-align: center;
     font-size: 28px;
-}
-
-.answer {
+ }
+ 
+ .answer {
     color: #F41971;
     text-align: center;
     font-style: bold;
     font-size: 27px;
     font-family: "Margarine",sans-serif;
-}
-
-.submit {
+ }
+ 
+ .submit {
     text-align: center;
     margin: 28px;
-}
-
-#formButton{
+ }
+ 
+ #formButton{
     font-size: 20px;
     color: #F41971;
     background-color: #FFE000;
     border-radius: 12px;
     border: 2px solid #ADEB00;
     font-family: "Margarine",sans-serif;
-}
-
-@media(max-width: 480px){
+ }
+ 
+ @media(max-width: 768px){
     body{
         width: 95%;
         height: 95%;
     }
-
+ 
     .container{
-        margin: 0;
+        margin: auto;
+        text-align: center;
     }
-
+ 
     .question{
         font-size: 14px;
     }
-
+ 
     .answer{
         font-size: 14px;
     }
-
+ 
     .submit{
         font-size: 14px;
     }
-
+ 
     #formButton{
         font-size: 14px;
     }
-}
+ 
+    #video-container{
+        margin: auto;
+    }
+ 
+    #video-container iframe{
+        width: 300px;
+        height: 200px;
+        margin: auto;
+    }
+ }
