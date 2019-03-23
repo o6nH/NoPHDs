@@ -142,3 +142,13 @@ buildApiRequest('GET',
                'playlistId': 'PL0FeOu0VtegcbplQ3bZ2SgjKVwsb-GxpJ'});
 
 }
+
+// Using Fecth [failed due to CORS error]
+var oauth2URL = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&playlistId=PL0FeOu0VtegcevmxMM6hnmmlTFycHZ3Zb&key=AIzaSyBWl800UrBjg3uVTtb9qPHTVuJywVDeaj0'
+//var oauth2Body = {grant_type: 'client_credentials'};
+fetch(oauth2URL).then(res => res.json())
+.then(response => {
+    bearerToken = response['access_token']
+    console.log('Success:', JSON.stringify(response));
+})
+.catch(error => console.error('Error:', error));
