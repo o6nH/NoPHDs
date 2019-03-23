@@ -405,9 +405,9 @@ fetch(entertainURL, { method: "GET" })
   .then(res => res.json())
   .then(response => {
     for (let snip of response.items){
-      entVids.push(snip.resourceId.videoId);//videoIs got pushed to array
+      entVids.push(snip.resourceId.videoId);
     }
-    console.log('Success:', JSON.stringify(response));
+    //console.log('Success:', JSON.stringify(response));
   })
   .catch(error => console.error('Error:', error));
 
@@ -415,9 +415,9 @@ fetch(eduURL, { method: "GET" })
   .then(res => res.json())
   .then(response => {
     for (let snip of response.items){
-      eduVids.push(snip.resourceId.videoId);//videoIs got pushed to array
+      eduVids.push(snip.resourceId.videoId);
     }
-    console.log('Success:', JSON.stringify(response));
+    //console.log('Success:', JSON.stringify(response));
   })
   .catch(error => console.error('Error:', error));
 
