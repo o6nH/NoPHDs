@@ -9,8 +9,6 @@
 
 body {
     background: #128CCB;
-    border-style: dotted;
-    border-color: #12BCCB;
     background-image: url("sunshine.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -66,7 +64,28 @@ h2 {
 }
 
 @media(max-width: 480px){
-    .container{
+    body{
         width: 95%;
+        height: 95%;
+    }
+
+    .container{
+        margin: 0;
+    }
+
+    .question{
+        font-size: 14px;
+    }
+
+    .answer{
+        font-size: 14px;
+    }
+
+    .submit{
+        font-size: 14px;
+    }
+
+    #formButton{
+        font-size: 14px;
     }
 }
