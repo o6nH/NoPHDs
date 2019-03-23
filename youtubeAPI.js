@@ -411,8 +411,12 @@ let randOp = Math.floor(Math.random() * 3);
 let opPicked = operator[randOp];
 
 function changeEquation() {
-
+    num1 = Math.floor(Math.random() * 10);
+    num2 = Math.floor(Math.random() * 10);
+    randOp = Math.floor(Math.random() * 3);
+    opPicked = operator[randOp];
     equation.innerHTML = `${num1} ${opPicked} ${num2}`;
+    formAnswer.value = '';
 }
 
 
@@ -421,21 +425,25 @@ let isCorrect;
 function checkAnswer() {
     let x = formAnswer.value;
     if (opPicked === '+' && num1 + num2 == x) {
-        alert(`Good Job! \n ${equation.value} = ${x} \n is correct!`);
+        alert(`Good Job! \n ${equation.innerHTML} = ${x} \n is correct!`);
         isCorrect = true;
     }
     else if (opPicked === '-' && num1 - num2 == x) {
-        alert(`Good Job! \n ${equation.value} = ${x} \n is correct!`);
+        alert(`Good Job! \n ${equation.innerHTML} = ${x} \n is correct!`);
         isCorrect = true;
     }
     else if (opPicked === '*' && num1 * num2 == x) {
-        alert(`Good Job! \n ${equation.value} = ${x} \n is correct!`);
+        alert(`Good Job! \n ${equation.innerHTML} = ${x} \n is correct!`);
         isCorrect = true;
     }
     else {
-        alert('Sorry, that answer is incorrect. Please try again');
+        alert(`Oops, try again! \n ${equation.innerHTML} = ${x} \n is incorrect!`);
         isCorrect = false;
     }
+    changeEquation();
+
+
+
     if (isCorrect) {
 
 
