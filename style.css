@@ -1,5 +1,7 @@
 body {
-    background: #ADEB00;
+    background: #128CCB;
+    border-style: dotted;
+    border-color: #12BCCB;
 }
 
 .container {
@@ -7,7 +9,7 @@ body {
     margin: 0 auto;
     padding: 0;
     border: 0;
-    height: 100%;
+    height: 100vh;
     background-color: #3AAFEC;
 }
 
@@ -20,9 +22,12 @@ body {
 }
 
 .answer {
-    color: #ADEB00;
+    color: #F41971;
+    font-style: italic;
+    text-align: center;
 }
 
 .submit {
-    color:
+    text-align: center;
+    margin: 20px;
 }
