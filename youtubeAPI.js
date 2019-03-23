@@ -83,7 +83,12 @@ function checkAnswer() {
 
 };
 
-
+function checkAnswerFromInput (e){
+    let key = e.which || e.keycode;
+    if (key === 13){
+        checkAnswer();
+    }
+};
 
 
 fetch(entertainURL, { method: "GET" })
@@ -112,4 +117,5 @@ fetch(eduURL, { method: "GET" })
 changeEquation();
 formButton.addEventListener('click', checkAnswer);
 
+formAnswer.addEventListener('keypress', checkAnswerFromInput);
 
