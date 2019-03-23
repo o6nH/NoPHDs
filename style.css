@@ -64,3 +64,9 @@ h2 {
     border: 2px solid #ADEB00;
     font-family: "Margarine",sans-serif;
 }
+
+@media(max-width: 480px){
+    .container{
+        width: 95%;
+    }
+}
