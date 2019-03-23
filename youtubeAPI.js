@@ -440,11 +440,11 @@ function checkAnswer() {
         alert(`Oops, try again! \n ${equation.innerHTML} = ${x} \n is incorrect!`);
         isCorrect = false;
     }
-    changeEquation();
-
+    formAnswer.value = '';
 
 
     if (isCorrect) {
+        changeEquation();
 
 
         const videoContainer = document.getElementById('video-container');
