@@ -5,8 +5,6 @@
 // https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&playlistId=PL0FeOu0VtegcbplQ3bZ2SgjKVwsb-GxpJ&key=AIzaSyBWl800UrBjg3uVTtb9qPHTVuJywVDeaj0
 
 
-<script>
-
 /***** START BOILERPLATE CODE: Load client library, authorize user. *****/
 
 // Global variables for GoogleAuth object, auth status.
@@ -144,4 +142,3 @@ buildApiRequest('GET',
                'playlistId': 'PL0FeOu0VtegcbplQ3bZ2SgjKVwsb-GxpJ'});
 
 }
-</script>
