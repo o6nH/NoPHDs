@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta
+      name="google-site-verification"
+      content="qVgc8pWJZScbC9oj2Ev65vza04D3pHwnqjXyJ9ChsgE"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <div class="container">
+      <div id="video-container">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/RPoBE-E8VOc"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
 
-          <div id="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/RPoBE-E8VOc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <form method="dialog" class="form">
+        <div class="question"></div>
 
-            </div>
-
-      <form  method="dialog" class="form">
-            <div class="question">
-            </div>
-
-            <div class="answer">
-              <label for="text">Answer: </label>
-              <input type="text" name="answer" required>
-            </div>
-            <div class="submit">
-              <input type="submit" value="Submit">
-            </div>
-          </form>
-
-
+        <div class="answer">
+          <label for="text">Answer: </label>
+          <input type="text" name="answer" required />
+        </div>
+        <div class="submit">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
     </div>
   </body>
 
- 
   <button id="execute-request-button">Authorize</button>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script async defer src="https://apis.google.com/js/api.js" 
-          onload="this.onload=function(){};handleClientLoad()" 
-          onreadystatechange="if (this.readyState === 'complete') this.onload()">
-  </script>
-   <scritp src="math.js"></scritp>
-   <scritp src="youtubeAPI.js"></scritp>
+  <script
+    async
+    defer
+    src="https://apis.google.com/js/api.js"
+    onload="this.onload=function(){};handleClientLoad()"
+    onreadystatechange="if (this.readyState === 'complete') this.onload()"
+  ></script>
+  <scritp src="math.js"></scritp>
+  <scritp src="youtubeAPI.js"></scritp>
 </html>
