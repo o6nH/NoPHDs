@@ -2,8 +2,8 @@
 const entertainURL = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&playlistId=PL0FeOu0VtegcbplQ3bZ2SgjKVwsb-GxpJ&key=AIzaSyBWl800UrBjg3uVTtb9qPHTVuJywVDeaj0'
 const eduURL = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&playlistId=PL0FeOu0VtegcevmxMM6hnmmlTFycHZ3Zb&key=AIzaSyBWl800UrBjg3uVTtb9qPHTVuJywVDeaj0'
 
-let eduVids = []; //list 1
-let entVids = []; //list 2
+let eduVids = []; //list 2
+let entVids = []; //list 1
 
 let operator = ["+", "-", "×",];
 let equation = document.getElementById("equation");
@@ -51,7 +51,7 @@ function checkAnswer() {
         changeEquation();
 
         if (
-            listDesired = 1
+            listDesired === 2
         ) {
             const videoContainer = document.getElementById('video-container');
 
@@ -64,7 +64,7 @@ function checkAnswer() {
             allowfullscreen
             ></iframe>`
 
-            listDesired = 2;
+            listDesired = 1;
         } else {
             
             const videoContainer = document.getElementById('video-container');
@@ -77,7 +77,7 @@ function checkAnswer() {
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
             ></iframe>`
-            listDesired = 1; 
+            listDesired = 2; 
         }
     }
 
