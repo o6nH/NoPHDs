@@ -36,7 +36,7 @@ function checkAnswer() {
         alert(`Good Job! \n ${equation.innerHTML} = ${x} \n is correct!`);
         isCorrect = true;
     }
-    else if (opPicked === '*' && num1 * num2 == x) {
+    else if (opPicked === '×' && num1 * num2 == x) {
         alert(`Good Job! \n ${equation.innerHTML} = ${x} \n is correct!`);
         isCorrect = true;
     }
