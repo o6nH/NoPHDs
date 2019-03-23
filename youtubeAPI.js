@@ -76,3 +76,13 @@ function nextPage() {
 function previousPage() {
   requestVideoPlaylist(playlistId, prevPageToken);
 }
+
+
+/* Main Function */
+// generate math question and display
+// if math question correct display playlistId()
+//// get playlistID for entertaining playlist
+requestVideoPlaylist('PL0FeOu0VtegcbplQ3bZ2SgjKVwsb-GxpJ','');
+// else math question is wrong and need to re-generate and re-display function
+//// get playlistID for educational playlist
+requestVideoPlaylist('PL0FeOu0VtegcevmxMM6hnmmlTFycHZ3Zb','');
