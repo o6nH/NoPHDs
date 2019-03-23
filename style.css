@@ -1,5 +1,5 @@
-h1 {
-    color: blue;
+body {
+    background: #ADEB00;
 }
 
 .container {
@@ -16,7 +16,7 @@ h1 {
 }
 
 .question {
-    color: 
+    color: black;
 }
 
 .answer {
