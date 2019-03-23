@@ -18,18 +18,19 @@ function answer () {
     let x = formAnswer.value;
     if (opPicked === '+' && num1 + num2 == x) {
         alert ('You got it correct!');
+        return true;
     }
     else if (opPicked === '-' && num1 - num2 == x) {
         alert ('You got it correct!');
+        return true;
     }
     else if (opPicked === '*' && num1 * num2 == x) {
         alert ('You got it correct!');
-    }
-    else if (opPicked === '/' && num1 / num2 == x) {
-        alert ('You got it correct!');
+        return true;
     }
     else {
-        alert ('Sorry, try again');
+        alert ('Sorry, that answer is incorrect. Please try again');
+        return false;
     }
 }
 
