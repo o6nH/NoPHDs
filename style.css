@@ -18,11 +18,18 @@ body {
 
 html {
     height: 100%;
+    font-family: "Margarine",sans-serif;
 }
 
 h1 {
     text-align: center;
     color: #ADEB00;
+}
+
+h2 {
+   color: #FFE000;
+   text-align: center;
+   font-family: "Margarine",sans-serif;
 }
 
 .form {
@@ -38,9 +45,10 @@ h1 {
 
 .answer {
     color: #F41971;
-    font-style: italic;
     text-align: center;
-    font-size: 20px;
+    font-style: bold;
+    font-size: 27px;
+    font-family: "Margarine",sans-serif;
 }
 
 .submit {
@@ -54,4 +62,5 @@ h1 {
     background-color: #FFE000;
     border-radius: 12px;
     border: 2px solid #ADEB00;
+    font-family: "Margarine",sans-serif;
 }
